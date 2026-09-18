@@ -4,7 +4,7 @@ import { participants } from '@/lib/mock-data';
 export default function AdminPrototype(){
   return <main className="page">
     <section className="prototype-hero compact">
-      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p></div>
+      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p><div className="batch-status"><span className="done">Batch 1 · Core Complete</span><span className="active">Batch 2 · Engagement + Support</span></div></div>
       <div className="prototype-user"><span>Signed in as</span><strong>Program Coordinator</strong><small>Full PSMS operational access</small></div>
     </section>
 
@@ -26,12 +26,12 @@ export default function AdminPrototype(){
       </section>
 
       <section className="card">
-        <div className="prototype-section-head"><div><span className="pill">Today</span><h2>Program Operations</h2></div></div>
+        <div className="prototype-section-head"><div><span className="pill">Working Now</span><h2>Program Operations</h2></div></div>
         <div className="quick-actions">
-          <Link href="/psms/attendance"><strong>Record Attendance</strong><span>Create/select event → roster → save</span></Link>
-          <Link href="/psms/support"><strong>Record Support Meeting</strong><span>HTM, CASE, MedOpp, Well-Being</span></Link>
-          <Link href="/psms/development"><strong>Review Experiences</strong><span>Shadowing, service, research, leadership</span></Link>
-          <Link href="/psms/requirements"><strong>Review Compliance</strong><span>Rules + participant requirement status</span></Link>
+          <Link href="/psms/participants"><strong>Participant Directory + 360</strong><span>Search the shared participant core and open the five-pillar operational record.</span></Link>
+          <Link href="/psms/attendance"><strong>Events & Attendance</strong><span>Create multi-program events → deduplicated roster → attendance + notes.</span></Link>
+          <Link href="/psms/support"><strong>Support & Follow-Up</strong><span>HTM, CASE, MedOpp, Well-Being → restricted notes → follow-up queue.</span></Link>
+          <Link href="/psms/development"><strong>Development Experiences</strong><span>Current prototype; fuller student workflow arrives in Batch 4.</span></Link>
         </div>
       </section>
     </div>

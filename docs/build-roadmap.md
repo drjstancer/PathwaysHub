@@ -10,7 +10,7 @@ This roadmap preserves the agreed product vision:
 
 ## Batch 1 — PSMS Core Operational Foundation
 
-Status: **In development**
+Status: **Complete**
 
 Scope:
 - Participant Directory
@@ -25,6 +25,8 @@ Success criterion:
 Staff can locate a participant, understand every current/historical program relationship, see the five-pillar operational snapshot, and move into the appropriate workflow.
 
 ## Batch 2 — Engagement + Support Workflows
+
+Status: **In development**
 
 Scope:
 - event creation and management
