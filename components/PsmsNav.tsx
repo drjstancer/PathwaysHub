@@ -2,6 +2,9 @@ import Link from 'next/link';
 
 const items=[
   ['/psms','Dashboard'],
+  ['/psms/participants','Participants'],
+  ['/psms/programs','Programs'],
+  ['/psms/cohorts','Cohorts'],
   ['/psms/attendance','Attendance'],
   ['/psms/requirements','Requirements'],
   ['/psms/support','Support'],
