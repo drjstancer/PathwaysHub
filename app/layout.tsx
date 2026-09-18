@@ -14,7 +14,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <header className="topbar">
           <Link className="brand" href="/"><span>MU</span> CaPS Pathways Ecosystem</Link>
           <nav aria-label="Primary">
+            <Link href="/prototype">Prototype</Link>
             <Link href="/psms">PSMS</Link>
+            <Link href="/psms/programs">Programs</Link>
             <Link href="/hub">PathwaysHub</Link>
             <Link href="/hub/compare">Compare</Link>
             <Link href="/hub/journeys">Journeys</Link>
