@@ -4,7 +4,7 @@ import { participants } from '@/lib/mock-data';
 export default function AdminPrototype(){
   return <main className="page">
     <section className="prototype-hero compact">
-      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p><div className="batch-status"><span className="done">Batch 1 · Core</span><span className="done">Batch 2 · Engagement + Support</span><span className="active">Batch 3 · Progress + Compliance</span></div></div>
+      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p><div className="batch-status"><span className="done">Batch 1 · Core</span><span className="done">Batch 2 · Engagement + Support</span><span className="done">Batch 3 · Progress + Compliance</span></div></div>
       <div className="prototype-user"><span>Signed in as</span><strong>Program Coordinator</strong><small>Full PSMS operational access</small></div>
     </section>
 

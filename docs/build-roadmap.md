@@ -40,7 +40,7 @@ Scope:
 
 ## Batch 3 — Progress + Compliance
 
-Status: **In development**
+Status: **Complete**
 
 Scope:
 - requirement catalog
