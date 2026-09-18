@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useMemo, useState } from 'react';
 import { programs } from '@/lib/mock-data';
 
@@ -21,7 +22,7 @@ export default function ComparePage(){
   ];
 
   return <main className="page">
-    <section className="hero"><div><div className="eyebrow">PathwaysHub Comparison Workspace</div><h1>Compare programs and cohorts.</h1><p>Descriptive comparison workspace using shared ecosystem metrics. Production filters will extend to cohort, year, institution, geography, and approved participant characteristics.</p></div></section>
+    <section className="hero"><div><div className="eyebrow">PathwaysHub Comparison Workspace</div><h1>Compare programs and cohorts.</h1><p>Descriptive comparison workspace using shared ecosystem metrics. Production filters will extend to cohort, year, institution, geography, and approved participant characteristics.</p></div><Link className="button secondary" href="/hub/compare/participants">Compare Participants →</Link></section>
     <div className="compare-controls">
       <label>Program A<select value={left} onChange={e=>setLeft(e.target.value)}>{programs.map(p=><option key={p.code} value={p.code}>{p.name}</option>)}</select></label>
       <label>Program B<select value={right} onChange={e=>setRight(e.target.value)}>{programs.map(p=><option key={p.code} value={p.code}>{p.name}</option>)}</select></label>

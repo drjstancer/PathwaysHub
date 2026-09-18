@@ -19,6 +19,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <Link href="/hub/compare">Compare</Link>
             <Link href="/hub/journeys">Journeys</Link>
             <Link href="/hub/cqi">CQI</Link>
+            <Link href="/hub/reports">Reports</Link>
           </nav>
         </header>
         {children}
