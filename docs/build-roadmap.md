@@ -26,7 +26,7 @@ Staff can locate a participant, understand every current/historical program rela
 
 ## Batch 2 — Engagement + Support Workflows
 
-Status: **In development**
+Status: **Complete**
 
 Scope:
 - event creation and management
@@ -39,6 +39,8 @@ Scope:
 - restricted-note behavior in the application layer
 
 ## Batch 3 — Progress + Compliance
+
+Status: **Complete**
 
 Scope:
 - requirement catalog

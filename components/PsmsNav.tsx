@@ -6,8 +6,9 @@ const items=[
   ['/psms/programs','Programs'],
   ['/psms/cohorts','Cohorts'],
   ['/psms/attendance','Attendance'],
-  ['/psms/requirements','Requirements'],
   ['/psms/support','Support'],
+  ['/psms/requirements','Requirements'],
+  ['/psms/academics','Academics'],
   ['/psms/development','Development'],
   ['/psms/interventions','Interventions']
 ] as const;

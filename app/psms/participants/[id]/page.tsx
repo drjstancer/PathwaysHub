@@ -39,7 +39,7 @@ export default async function ParticipantPage({params}:{params:Promise<{id:strin
         <div className="pillar-grid">
           <article className="card"><span className="pillar-kicker">Engagement</span><h3>{p.attendanceRate}% attendance</h3><p>{p.cohort} · most recent contact {p.lastContact}</p><Link href="/psms/attendance">Open attendance →</Link></article>
           <article className="card"><span className="pillar-kicker">Support</span><h3>{p.meetingsCompleted}/{p.meetingsRequired} meetings</h3><p>Assigned advisor: {p.advisor}</p><Link href="/psms/support">Open support →</Link></article>
-          <article className="card"><span className="pillar-kicker">Progress</span><h3>{p.overallGpa.toFixed(2)} overall GPA</h3><p>{p.scienceGpa.toFixed(2)} science GPA · {p.requirementRate}% requirements</p><Link href="/psms/requirements">Open requirements →</Link></article>
+          <article className="card"><span className="pillar-kicker">Progress</span><h3>{p.overallGpa.toFixed(2)} overall GPA</h3><p>{p.scienceGpa.toFixed(2)} science GPA · {p.requirementRate}% requirements</p><div className="progress-links"><Link href="/psms/requirements">Requirements →</Link><Link href="/psms/academics">Academics →</Link></div></article>
           <article className="card"><span className="pillar-kicker">Development</span><h3>{p.shadowingHours} shadowing hours</h3><p>{p.clinicalHours} clinical · {p.researchHours} research · {p.serviceHours} service · {p.leadershipHours} leadership</p><Link href="/psms/development">Open development →</Link></article>
           <article className="card"><span className="pillar-kicker">Intervention</span><h3>{alertLabel}</h3><p>{p.nextAction}</p><Link href="/psms/interventions">Open interventions →</Link></article>
         </div>

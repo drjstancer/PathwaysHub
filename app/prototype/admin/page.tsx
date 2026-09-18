@@ -4,7 +4,7 @@ import { participants } from '@/lib/mock-data';
 export default function AdminPrototype(){
   return <main className="page">
     <section className="prototype-hero compact">
-      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p><div className="batch-status"><span className="done">Batch 1 · Core Complete</span><span className="active">Batch 2 · Engagement + Support</span></div></div>
+      <div><div className="eyebrow">Prototype · PSMS Staff Experience</div><h1>CaPS Coordinator Workspace</h1><p>A staff member starts with what requires attention, then drills into the participant's complete record or a specific operational workflow.</p><div className="batch-status"><span className="done">Batch 1 · Core</span><span className="done">Batch 2 · Engagement + Support</span><span className="done">Batch 3 · Progress + Compliance</span></div></div>
       <div className="prototype-user"><span>Signed in as</span><strong>Program Coordinator</strong><small>Full PSMS operational access</small></div>
     </section>
 
@@ -31,7 +31,8 @@ export default function AdminPrototype(){
           <Link href="/psms/participants"><strong>Participant Directory + 360</strong><span>Search the shared participant core and open the five-pillar operational record.</span></Link>
           <Link href="/psms/attendance"><strong>Events & Attendance</strong><span>Create multi-program events → deduplicated roster → attendance + notes.</span></Link>
           <Link href="/psms/support"><strong>Support & Follow-Up</strong><span>HTM, CASE, MedOpp, Well-Being → restricted notes → follow-up queue.</span></Link>
-          <Link href="/psms/development"><strong>Development Experiences</strong><span>Current prototype; fuller student workflow arrives in Batch 4.</span></Link>
+          <Link href="/psms/requirements"><strong>Requirements & Compliance</strong><span>Rule-driven applicability, bulk generation, and participant status.</span></Link>
+          <Link href="/psms/academics"><strong>Academics</strong><span>Course history, GPA calculations, verified snapshots, and MCAT where applicable.</span></Link>
         </div>
       </section>
     </div>
