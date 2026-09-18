@@ -13,10 +13,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <header className="topbar">
           <Link className="brand" href="/"><span>MU</span> CaPS Pathways Ecosystem</Link>
-          <nav>
+          <nav aria-label="Primary">
             <Link href="/psms">PSMS</Link>
             <Link href="/hub">PathwaysHub</Link>
             <Link href="/hub/compare">Compare</Link>
+            <Link href="/hub/journeys">Journeys</Link>
+            <Link href="/hub/cqi">CQI</Link>
           </nav>
         </header>
         {children}
