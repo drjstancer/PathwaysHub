@@ -1,56 +1,43 @@
--- PathwaysHub MVP Mock Seed Data
--- Mock data only. Do not replace with real student records in a public repository.
+-- Synthetic demo seed data for ecosystem v1.
+-- Do not replace with real protected student data in this public repository.
 
--- Programs
-insert into programs (id, program_name, program_type, active) values
-  ('00000000-0000-0000-0000-000000000101', 'MMRSEP', 'preprofessional', true),
-  ('00000000-0000-0000-0000-000000000102', 'Medical Explorations', 'preprofessional', true),
-  ('00000000-0000-0000-0000-000000000103', 'JPAWS', 'preprofessional', true),
-  ('00000000-0000-0000-0000-000000000104', 'PAWS', 'preadmission', true),
-  ('00000000-0000-0000-0000-000000000105', 'PEN', 'preadmission', true),
-  ('00000000-0000-0000-0000-000000000106', 'Bryant Scholars', 'preadmission', true),
-  ('00000000-0000-0000-0000-000000000107', 'Springfield Scholars', 'preadmission', true),
-  ('00000000-0000-0000-0000-000000000108', 'MedPrep I', 'preprofessional', true),
-  ('00000000-0000-0000-0000-000000000109', 'MedPrep II', 'preprofessional', true);
+insert into institutions(id,name,institution_type,city,state) values
+('10000000-0000-0000-0000-000000000001','University of Missouri','College/University','Columbia','MO'),
+('10000000-0000-0000-0000-000000000002','Lincoln University','College/University','Jefferson City','MO'),
+('10000000-0000-0000-0000-000000000003','Missouri State University','College/University','Springfield','MO')
+on conflict do nothing;
 
--- Program Cohorts
-insert into program_cohorts (id, program_id, cohort_code, cohort_name, cohort_type, entering_class_year, program_year, status, notes) values
-  ('00000000-0000-0000-0000-000000000201', '00000000-0000-0000-0000-000000000101', '2026', 'MMRSEP 2026', 'program_year', null, 2026, 'active', 'Program year cohort'),
-  ('00000000-0000-0000-0000-000000000202', '00000000-0000-0000-0000-000000000102', '2026', 'Medical Explorations 2026', 'program_year', null, 2026, 'active', 'Program year cohort'),
-  ('00000000-0000-0000-0000-000000000203', '00000000-0000-0000-0000-000000000103', '2026', 'JPAWS 2026', 'program_year', null, 2026, 'active', 'Program year cohort'),
-  ('00000000-0000-0000-0000-000000000204', '00000000-0000-0000-0000-000000000104', 'EC27', 'PAWS EC27', 'entering_class', 2027, null, 'active', 'Expected medical school entering class'),
-  ('00000000-0000-0000-0000-000000000205', '00000000-0000-0000-0000-000000000104', 'EC28', 'PAWS EC28', 'entering_class', 2028, null, 'active', 'Expected medical school entering class'),
-  ('00000000-0000-0000-0000-000000000206', '00000000-0000-0000-0000-000000000106', 'EC29', 'Bryant EC29', 'entering_class', 2029, null, 'active', 'Expected medical school entering class');
+insert into programs(id,code,name,program_type) values
+('20000000-0000-0000-0000-000000000001','JPAWS','JPAWS','preprofessional'),
+('20000000-0000-0000-0000-000000000002','PAWS','PAWS','preadmission'),
+('20000000-0000-0000-0000-000000000003','PEN','Physician ENgineers','preadmission'),
+('20000000-0000-0000-0000-000000000004','BRYANT','Bryant Scholars','preadmission'),
+('20000000-0000-0000-0000-000000000005','SPRINGFIELD','Springfield Scholars','preadmission'),
+('20000000-0000-0000-0000-000000000006','MMRSEP','MMRSEP','preprofessional'),
+('20000000-0000-0000-0000-000000000007','MEDX','Medical Explorations','preprofessional'),
+('20000000-0000-0000-0000-000000000008','MEDPREP1','MedPrep I','preprofessional'),
+('20000000-0000-0000-0000-000000000009','MEDPREP2','MedPrep II','preprofessional')
+on conflict do nothing;
 
--- People
-insert into people (id, first_name, last_name, email, phone, city, county, state, rural_indicator, ses_indicator, educationally_disadvantaged, first_generation, anticipated_medical_school_ec, current_stage) values
-  ('00000000-0000-0000-0000-000000000301', 'Avery', 'Johnson', 'avery.johnson@example.edu', null, 'Columbia', 'Boone', 'MO', false, true, true, true, 'EC30', 'participant'),
-  ('00000000-0000-0000-0000-000000000302', 'Maya', 'Robinson', 'maya.robinson@example.edu', null, 'Moberly', 'Randolph', 'MO', true, true, true, false, 'EC29', 'participant'),
-  ('00000000-0000-0000-0000-000000000303', 'Jordan', 'Ellis', 'jordan.ellis@example.edu', null, 'Kansas City', 'Jackson', 'MO', false, false, true, true, 'EC27', 'preadmission'),
-  ('00000000-0000-0000-0000-000000000304', 'Taylor', 'Nguyen', 'taylor.nguyen@example.edu', null, 'Springfield', 'Greene', 'MO', false, false, false, false, 'EC28', 'preadmission'),
-  ('00000000-0000-0000-0000-000000000305', 'Cameron', 'Brooks', 'cameron.brooks@example.edu', null, 'Mexico', 'Audrain', 'MO', true, false, true, true, 'EC27', 'matriculant'),
-  ('00000000-0000-0000-0000-000000000306', 'Riley', 'Carter', 'riley.carter@example.edu', null, 'St. Louis', 'St. Louis City', 'MO', false, true, true, true, null, 'resident');
+insert into cohorts(id,program_id,code,name,cohort_type,entering_class_year,program_year) values
+('30000000-0000-0000-0000-000000000001','20000000-0000-0000-0000-000000000002','EC30','PAWS EC30','entering_class',2030,null),
+('30000000-0000-0000-0000-000000000002','20000000-0000-0000-0000-000000000003','2026','PEN 2026','program_year',null,2026),
+('30000000-0000-0000-0000-000000000003','20000000-0000-0000-0000-000000000006','2023','MMRSEP 2023','program_year',null,2023),
+('30000000-0000-0000-0000-000000000004','20000000-0000-0000-0000-000000000001','2024','JPAWS 2024','program_year',null,2024)
+on conflict do nothing;
 
--- Participation
-insert into participation (id, person_id, program_id, cohort_id, program_year, applied, accepted, attended, completed, scholarship_awarded, scholarship_amount, completion_date, notes) values
-  ('00000000-0000-0000-0000-000000000401', '00000000-0000-0000-0000-000000000301', '00000000-0000-0000-0000-000000000101', '00000000-0000-0000-0000-000000000201', 2026, true, true, true, true, true, 100.00, '2026-06-25', 'Mock MMRSEP participant'),
-  ('00000000-0000-0000-0000-000000000402', '00000000-0000-0000-0000-000000000302', '00000000-0000-0000-0000-000000000103', '00000000-0000-0000-0000-000000000203', 2026, true, true, true, false, false, null, null, 'Mock JPAWS participant'),
-  ('00000000-0000-0000-0000-000000000403', '00000000-0000-0000-0000-000000000303', '00000000-0000-0000-0000-000000000104', '00000000-0000-0000-0000-000000000204', 2025, true, true, true, false, false, null, null, 'Mock PAWS EC27 student'),
-  ('00000000-0000-0000-0000-000000000404', '00000000-0000-0000-0000-000000000304', '00000000-0000-0000-0000-000000000104', '00000000-0000-0000-0000-000000000205', 2026, true, true, true, false, false, null, null, 'Mock PAWS EC28 student'),
-  ('00000000-0000-0000-0000-000000000405', '00000000-0000-0000-0000-000000000305', '00000000-0000-0000-0000-000000000104', '00000000-0000-0000-0000-000000000204', 2024, true, true, true, true, false, null, '2026-05-01', 'Mock PAWS completer'),
-  ('00000000-0000-0000-0000-000000000406', '00000000-0000-0000-0000-000000000306', '00000000-0000-0000-0000-000000000104', '00000000-0000-0000-0000-000000000204', 2022, true, true, true, true, false, null, '2024-05-01', 'Mock PAWS alumnus');
+insert into people(id,institutional_id,pawprint,first_name,last_name,email,institution_id,city,county,state,rural_indicator,first_generation,classification,anticipated_medical_school_ec,current_stage) values
+('40000000-0000-0000-0000-000000000001','14000001','ajdemo','Avery','Johnson','avery@example.edu','10000000-0000-0000-0000-000000000001','Columbia','Boone','MO',false,true,'Senior',2030,'preadmission'),
+('40000000-0000-0000-0000-000000000002','14000002','mrdemo','Maya','Robinson','maya@example.edu','10000000-0000-0000-0000-000000000002','Jefferson City','Cole','MO',false,true,'Junior',2029,'preadmission'),
+('40000000-0000-0000-0000-000000000003','14000003','jedemo','Jordan','Ellis','jordan@example.edu','10000000-0000-0000-0000-000000000003','Springfield','Greene','MO',false,false,'Junior',2030,'participant')
+on conflict do nothing;
 
--- Academics
-insert into academics (id, person_id, academic_year, reporting_term, cumulative_gpa, science_gpa, mcat_score, mcat_date, notes) values
-  ('00000000-0000-0000-0000-000000000501', '00000000-0000-0000-0000-000000000303', '2025-2026', 'Spring 2026', 3.72, 3.58, 508, '2026-04-12', 'Mock academic record'),
-  ('00000000-0000-0000-0000-000000000502', '00000000-0000-0000-0000-000000000304', '2025-2026', 'Spring 2026', 3.84, 3.70, 511, '2026-05-03', 'Mock academic record'),
-  ('00000000-0000-0000-0000-000000000503', '00000000-0000-0000-0000-000000000305', '2024-2025', 'Spring 2025', 3.65, 3.49, 506, '2025-03-22', 'Mock academic record');
+insert into participations(id,person_id,program_id,cohort_id,participation_status,start_date,applied,accepted,attended,completed) values
+('50000000-0000-0000-0000-000000000001','40000000-0000-0000-0000-000000000001','20000000-0000-0000-0000-000000000006','30000000-0000-0000-0000-000000000003','completed','2023-05-01',true,true,true,true),
+('50000000-0000-0000-0000-000000000002','40000000-0000-0000-0000-000000000001','20000000-0000-0000-0000-000000000001','30000000-0000-0000-0000-000000000004','completed','2024-09-01',true,true,true,true),
+('50000000-0000-0000-0000-000000000003','40000000-0000-0000-0000-000000000001','20000000-0000-0000-0000-000000000002','30000000-0000-0000-0000-000000000001','active','2025-09-01',true,true,true,false),
+('50000000-0000-0000-0000-000000000004','40000000-0000-0000-0000-000000000003','20000000-0000-0000-0000-000000000003','30000000-0000-0000-0000-000000000002','active','2026-09-01',true,true,true,false)
+on conflict do nothing;
 
--- Matriculation
-insert into matriculation (id, person_id, medical_school, matriculation_term, matriculation_year, expected_graduation_year, notes) values
-  ('00000000-0000-0000-0000-000000000601', '00000000-0000-0000-0000-000000000305', 'University of Missouri School of Medicine', 'Fall', 2027, 2031, 'Mock matriculation record'),
-  ('00000000-0000-0000-0000-000000000602', '00000000-0000-0000-0000-000000000306', 'University of Missouri School of Medicine', 'Fall', 2024, 2028, 'Mock matriculation record');
-
--- Residency Match
-insert into residency_match (id, person_id, match_year, specialty, institution, city, state, primary_care, missouri_match, notes) values
-  ('00000000-0000-0000-0000-000000000701', '00000000-0000-0000-0000-000000000306', 2028, 'Family Medicine', 'University of Missouri Health Care', 'Columbia', 'MO', true, true, 'Mock match outcome');
+insert into development_experiences(person_id,program_id,experience_type,experience_date,organization,specialty_or_area,preceptor_or_supervisor,hours,reflection,submitted_by_person,review_status)
+values ('40000000-0000-0000-0000-000000000003','20000000-0000-0000-0000-000000000003','shadowing','2026-09-15','Demo Health System','Emergency Medicine','Demo Preceptor',8,'Synthetic reflection demonstrating student-submitted experiential learning documentation.',true,'pending');
